@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Practice</title>
+    <script src="../vue.js"></script>
+</head>
+
+<body>
+    <!-- <div id="root">
+        <div v-if="count===1">Green</div>
+        <div v-else-if="count===0">Red</div>
+        <div v-else>Blue</div>
+    </div> -->
+
+    <!-- <div id="root">
+        <div v-show="count===1">Green</div>
+    </div> -->
+
+
+    <!-- <div id="root">
+        Sign Up
+        <br>
+        <input v-model="email" :class="{red:email.length<2}">
+        <br>
+        <button onclick="alert('signed up')" :disabled="email.length < 2">Submit</button>
+    </div> -->
+
+    <!-- <div id="root">
+        <p v-html="email"></p>
+        <p v-text="email"></p>
+        <p v-once>{{email}}</p>
+        <p>{{email}}</p>
+        <br>
+        <input v-model="email" :class="[email.length <2 ? 'red' : 'green']">
+        <br>
+        <button onclick="alert('signed up')" :disabled="email.length < 2">Submit</button>
+    </div> -->
+
+    <div id="root">
+        <input v-model="newCat" @keyup.enter="addKitty">
+        <!-- v-on: = @ -->
+        <button @click="addKitty">ADD</button>
+        <ul>
+            <!-- <li v-for="cat in cats">{{cat}}</li> -->
+            <li v-for="cat in cats">{{cat.name  | capitalize}}</li>
+        </ul>
+    </div>
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" href="main.css">
+</body>
+
+</html>
