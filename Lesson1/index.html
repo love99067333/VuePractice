@@ -40,6 +40,8 @@
     </div> -->
 
     <div id="root">
+        {{kittyName}}
+        <br>
         <input v-model="newCat" @keyup.enter="addKitty">
         <!-- v-on: = @ -->
         <button @click="addKitty">ADD</button>
@@ -47,6 +49,7 @@
             <!-- <li v-for="cat in cats">{{cat}}</li> -->
             <li v-for="cat in cats">{{cat.name  | capitalize}}</li>
         </ul>
+        <cat-list :cats="cats" />
     </div>
     <script src="main.js"></script>
 
