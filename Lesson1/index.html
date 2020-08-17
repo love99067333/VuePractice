@@ -27,7 +27,7 @@
         <br>
         <button onclick="alert('signed up')" :disabled="email.length < 2">Submit</button>
     </div> -->
-
+    <!-- v-bind: = : -->
     <!-- <div id="root">
         <p v-html="email"></p>
         <p v-text="email"></p>
@@ -40,7 +40,13 @@
     </div> -->
 
     <div id="root">
+        <h1>Total: {{sum}}</h1>
+        <button-counter :initial-counter="10" @add-sum="sum++"></button-counter>
+        <button-counter :initial-counter="011" @add-sum="sum++"></button-counter>
+
+
         {{kittyName}}
+
         <br>
         <input v-model="newCat" @keyup.enter="addKitty">
         <!-- v-on: = @ -->
@@ -49,7 +55,12 @@
             <!-- <li v-for="cat in cats">{{cat}}</li> -->
             <li v-for="cat in cats">{{cat.name  | capitalize}}</li>
         </ul>
-        <cat-list :cats="cats" />
+        <cat-list :cats="cats"></cat-list>
+        <cat-list :cats="cats"></cat-list>
+        <cat-list :cats="cats"></cat-list>
+        <cat-list :cats="cats"></cat-list>
+        <cat-list :cats="cats"></cat-list>
+
     </div>
     <script src="main.js"></script>
 
